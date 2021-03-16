@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="239" id="KGk-i7-Jjw" customClass="TextViewTableViewCell" customModule="GithubUsers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="239"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="402" height="239"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrM-Gh-SFZ">
+                        <rect key="frame" x="10" y="5" width="382" height="135.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3ZS-qO-fxb">
+                                <rect key="frame" x="5" y="5" width="372" height="125.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-8o-Bfi">
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="733-3r-Sv9">
+                                        <rect key="frame" x="0.0" y="25.5" width="372" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="notesTextView"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="6QM-rf-XgQ"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3ZS-qO-fxb" firstAttribute="leading" secondItem="VrM-Gh-SFZ" secondAttribute="leading" constant="5" id="Cfa-oP-BZo"/>
+                            <constraint firstAttribute="bottom" secondItem="3ZS-qO-fxb" secondAttribute="bottom" constant="5" id="IK3-ld-tdS"/>
+                            <constraint firstItem="3ZS-qO-fxb" firstAttribute="top" secondItem="VrM-Gh-SFZ" secondAttribute="top" constant="5" id="MAw-kN-NNQ"/>
+                            <constraint firstAttribute="trailing" secondItem="3ZS-qO-fxb" secondAttribute="trailing" constant="5" id="cjE-8K-K2c"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VrM-Gh-SFZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KG1-MD-ocS"/>
+                    <constraint firstAttribute="trailing" secondItem="VrM-Gh-SFZ" secondAttribute="trailing" constant="10" id="KL2-B2-nQT"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VrM-Gh-SFZ" secondAttribute="bottom" constant="5" id="a57-K3-w19"/>
+                    <constraint firstItem="VrM-Gh-SFZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="cAI-Mb-nc1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="textView" destination="733-3r-Sv9" id="Hpx-TX-cK0"/>
+            </connections>
+            <point key="canvasLocation" x="136.23188405797103" y="124.88839285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
